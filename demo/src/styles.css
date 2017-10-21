@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+  min-height: 56px;
+}
+
+markdown {
+  display: block;
+  margin-top: 4.5rem;
+}
+
+markdown h2 {
+  margin-top: 3rem;
+}

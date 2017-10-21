@@ -1,0 +1,46 @@
+{
+  "name": "ng-on-rest-forms",
+  "version": "1.0.0-alpha.0",
+  "description": "forms module",
+  "main": "bundles/index.js",
+  "module": "index.js",
+  "scripts": {
+    "assets": "npm run docs && cpx \"docs/**/*\" ./dist/docs",
+    "build": "npm run clean && ng-packagr -p ng-package.json && npm run assets",
+    "clean": "rimraf dist docs coverage",
+    "docs": "typedoc src/index.ts",
+    "lint": "tslint \"src/**/*.ts\" \"test/**/*.ts\" \"*.js\" \"config/**/*.js\"",
+    "test": "karma start",
+    "test-watch": "karma start --no-single-run --auto-watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:paulsouche/ng-on-rest.git"
+  },
+  "keywords": [
+    "angular",
+    "REST",
+    "admin",
+    "back office"
+  ],
+  "author": "Paul Souche <paul.souche@gmail.com>",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "bugs": {
+    "url": "https://github.com/paulsouche/ng-on-rest/issues"
+  },
+  "homepage": "https://github.com/paulsouche/ng-on-rest#readme",
+  "peerDependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0"
+  },
+  "dependencies": {
+    "@ng-dynamic-forms/core": "^5.0.0",
+    "@ng-dynamic-forms/ui-ng-bootstrap": "^5.0.0",
+    "@ngx-translate/core": "^9.0.0"
+  }
+}

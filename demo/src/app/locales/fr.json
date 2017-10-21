@@ -1,0 +1,65 @@
+{
+  "demo": {
+    "core": {
+      "create": "/assets/demo/core/create.fr.md",
+      "delete": "/assets/demo/core/delete.fr.md",
+      "detail": "/assets/demo/core/detail.fr.md",
+      "list": "/assets/demo/core/list.fr.md"
+    },
+    "forms": {
+      "posts": {
+        "body": "Corps",
+        "title": "Titre"
+      },
+      "users": {
+        "email": "E mail",
+        "name": "Nom",
+        "phone": "Téléphone",
+        "username": "Nom d'utilisateur",
+        "website": "Site web",
+        "address": {
+          "city": "Ville",
+          "street": "Rue",
+          "suite": "Complément",
+          "zipcode": "Code Postal"
+        }
+      }
+    }
+  },
+  "home": {
+    "md": "/assets/home/home.fr.md"
+  },
+  "menu": {
+    "brand": "Ng on REST",
+    "core": "Core",
+    "create": "Create",
+    "detail": "Détail",
+    "list": "List",
+    "posts": "Posts",
+    "users": "Utilisateurs"
+  },
+  "posts": {
+    "cancel": "Annuler",
+    "create": "Créer",
+    "createTitle": "Créer un post",
+    "delete": "Supprimer",
+    "deleteTitle": "Supprimer le post",
+    "detailTitle": "Détail du post",
+    "edit": "Éditer",
+    "editTitle": "Éditer le post",
+    "title": "Posts"
+  },
+  "users": {
+    "address": "Adresse",
+    "addressDetail": "Merci de remplir une adresse valide",
+    "cancel": "Annuler",
+    "create": "Créer",
+    "createTitle": "Créer un utilisateur",
+    "details": "Détails",
+    "detailTitle": "Détail de l'utilisateur",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "save": "Sauvegarder",
+    "update": "Editer"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "no-console": [
+      true,
+      "log",
+      "dir",
+      "debug",
+      "trace"
+    ],
+    "no-reference": true,
+    "no-submodule-imports": [
+      true,
+      "@angular/common/locales",
+      "@angular/common/http",
+      "@angular/core/testing",
+      "@angular/http/testing",
+      "core-js",
+      "ng-on-rest-core/testing",
+      "zone.js",
+      "rxjs"
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-type"
+    ]
+  },
+  "jsRules": {
+    "quotemark": [
+      true,
+      "single"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+language: node_js
+cache: yarn
+sudo: false
+notifications:
+  email: false
+node_js:
+- '8'
+before_install:
+- export CHROME_BIN=chromium-browser
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- yarn lint
+- yarn build
+after_success:
+- yarn publish-version
+env:
+  global:
+    secure: CQBekF6qETIzSz8k4XL9P5XaOzgIBKntyNf78RsEuCjMQ+ti5NmoEPGohO9yvjUV6Mp6MwHcIFKMFpTVg6uWLmKHG8AyUuINUovPBR9K4SF3ucRXZ5rsi4/8mc2vNr6vbyfMmxm0kGbsPGnDskrWKH7+WQDU76t+LTaw2ArvBdO6lYbTFcJv1+WwsceE+3tPffN0WUtFTXLFBEpKqOmy0CilOiZruvNOa/DRsgrLuc7UFIJv6TZ3I02Qmq6DSSSlD/EcifzMjRnleav4dGHT0Fw2s/RBO4zXfWWXZLsTNYYLrreb9FF62VhvGGKJB/eW5wWw41zlmED12yl/IJk/2DECdYs32SoGhCOOFzQO+NGYKKQh4xJdiZjYez2Yb7acgeMVQiA9iQqM3etnLOPutfyEZBnYFi4JOVFZMnKreSJfAWU+BVzrlhlLQ+S44nhqVekByCc6odP6AvdQEadYBISJejqwQVwTQKw8YDD1ebbR235kKSzUyC6b/mhkgL1tTlKoYDKP+8/VqkTazHqH+Y3+CTOa552GohraDRcJYChJDlrHMKQQqdAEzUCgQguWI9iKawV4GzHrVaLMQDr+bWTiHdmKBdb7ZBO5eMvhyWPN/KgdTZMuZ6tTSaTpcOt95YcxUkBRvEfJbhCfYaZH6HbhvKc45iNFYJDpPfIeJ58=

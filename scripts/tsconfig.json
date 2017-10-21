@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "./dist",
+    "types": [
+      "node"
+    ]
+  },
+  "files": [
+    "./publish.ts",
+    "./symlink.ts",
+    "./upgrade.ts"
+  ]
+}

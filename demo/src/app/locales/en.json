@@ -1,0 +1,62 @@
+{
+  "demo": {
+    "core": {
+      "create": "/assets/demo/core/create.en.md",
+      "delete": "/assets/demo/core/delete.en.md",
+      "detail": "/assets/demo/core/detail.en.md",
+      "list": "/assets/demo/core/list.en.md"
+    },
+    "forms": {
+      "posts": {
+        "body": "Body",
+        "title": "Title"
+      },
+      "users": {
+        "email": "E mail",
+        "name": "Name",
+        "phone": "Phone",
+        "username": "User Name",
+        "website": "Website",
+        "address": {
+          "city": "City",
+          "street": "Street",
+          "suite": "Suite",
+          "zipcode": "Zip code"
+        }
+      }
+    }
+  },
+  "home": {
+    "md": "/assets/home/home.en.md"
+  },
+  "menu": {
+    "brand": "Ng on REST",
+    "core": "Core",
+    "create": "Create",
+    "detail": "Detail",
+    "list": "List",
+    "posts": "Posts",
+    "users": "Users"
+  },
+  "posts": {
+    "cancel": "Cancel",
+    "create": "Create",
+    "createTitle": "Create a post",
+    "delete": "Delete",
+    "deleteTitle": "Delete post",
+    "detailTitle": "Post detail",
+    "edit": "Edit",
+    "editTitle": "Edit post",
+    "title": "Posts"
+  },
+  "users": {
+    "address": "Address",
+    "addressDetail": "Please enter a valid address",
+    "cancel": "Cancel",
+    "create": "Create",
+    "createTitle": "Create a user",
+    "details": "Details",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}

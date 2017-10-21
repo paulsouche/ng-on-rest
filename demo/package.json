@@ -1,0 +1,46 @@
+{
+  "name": "ng-on-rest-core-demo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build --prod --preserve-symlinks",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "5.1.1",
+    "@angular/common": "5.1.1",
+    "@angular/compiler": "5.1.1",
+    "@angular/core": "5.1.1",
+    "@angular/forms": "5.1.1",
+    "@angular/http": "5.1.1",
+    "@angular/platform-browser": "5.1.1",
+    "@angular/platform-browser-dynamic": "5.1.1",
+    "@angular/router": "5.1.1",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.0",
+    "@ngx-resource/core": "^5.0.0",
+    "@ngx-translate/core": "^9.0.0",
+    "bootstrap": "^4.0.0-beta.0",
+    "core-js": "^2.0.0",
+    "ng-on-rest-core": "*",
+    "ng-on-rest-create": "*",
+    "ng-on-rest-detail": "*",
+    "ng-on-rest-forms": "*",
+    "ng-on-rest-list": "*",
+    "ngx-md": "^3.0.0",
+    "rxjs": "^5.0.0",
+    "ts-helpers": "^1.0.0",
+    "zone.js": "^0.8.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "@types/node": "*",
+    "codelyzer": "^4.0.0",
+    "ts-node": "^4.0.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.0.0"
+  }
+}
