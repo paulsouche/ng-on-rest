@@ -15,7 +15,7 @@ const copyPathProm = promisify(cpx.copy);
 const writeFileProm = promisify(fs.writeFile);
 const exec = childProcess.exec;
 
-const isWin = process.platform.includes('win32');
+const isWin = process.platform.indexOf('win32') >= 0;
 
 export interface IPackage {
   name: string;

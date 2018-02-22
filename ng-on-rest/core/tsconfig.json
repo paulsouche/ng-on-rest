@@ -12,7 +12,7 @@
     "theme": "default",
     "ignoreCompilerErrors": true,
     "excludePrivate": true,
-    "excludeNotExported": true,
+    "excludeNotExported": false,
     "target": "es2015",
     "moduleResolution": "node",
     "preserveConstEnums": true,

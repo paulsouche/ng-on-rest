@@ -1,11 +1,10 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "src": "",
   "dest": "dist",
   "workingDirectory": ".ng_build",
   "lib": {
     "entryFile": "src/index.ts",
-    "externals": {
+    "umdModuleIds": {
       "@ngx-resource/core": "ngx-resource-core",
       "@ngx-resource/handler-ngx-http": "ngx-resource-handler-ngx-http"
     }
