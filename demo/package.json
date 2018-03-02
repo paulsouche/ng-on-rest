@@ -27,6 +27,7 @@
     "ng-on-rest-create": "*",
     "ng-on-rest-detail": "*",
     "ng-on-rest-forms": "*",
+    "ng-on-rest-i18n": "*",
     "ng-on-rest-list": "*",
     "ngx-md": "^3.0.0",
     "rxjs": "^5.0.0",

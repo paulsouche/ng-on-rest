@@ -1,24 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { MarkdownModule } from 'ngx-md';
 import * as en from '../locales/en.json';
 import * as fr from '../locales/fr.json';
 import { navigatorLanguageFactory } from '../models/navigator-language.factory';
 import { platformNavigatorFactory } from '../models/platform-navigator.factory';
-import { LOCALES } from '../tokens/locales.token';
 import { PLATFORM_NAVIGATOR } from '../tokens/platform-navigator.token';
 
 @NgModule({
   exports: [
     CommonModule,
-    TranslateModule,
+    NgorI18nModule,
     MarkdownModule,
   ],
   imports: [
     CommonModule,
-    TranslateModule.forChild(),
+    NgorI18nModule.forChild(),
     MarkdownModule.forRoot(),
+    NgorI18nModule.forRoot({
+      rootLocales: { en, fr },
+    }),
   ],
   providers: [
     {
@@ -29,10 +31,6 @@ import { PLATFORM_NAVIGATOR } from '../tokens/platform-navigator.token';
       deps: [PLATFORM_NAVIGATOR],
       provide: LOCALE_ID,
       useFactory: navigatorLanguageFactory,
-    },
-    {
-      provide: LOCALES,
-      useValue: { en, fr },
     },
   ],
 })

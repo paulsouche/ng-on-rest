@@ -33,10 +33,7 @@ export class DemoDetailUserComponent implements UserDetailComponent {
   public step: string;
 
   public labels: INgorUpdateEntityLabels = {
-    cancel: 'users.cancel',
-    save: 'users.save',
     title: 'users.detailTitle',
-    update: 'users.update',
   };
 
   public userModel: TNgorFormModel = [
