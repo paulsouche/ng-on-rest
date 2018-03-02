@@ -49,7 +49,13 @@ export class NgorDynamicFormComponent<FormModel> implements OnInit, AfterViewChe
   public value: FormModel | undefined;
 
   @Input()
-  public labels: INgorFormLabels = {};
+  set labels(labels: INgorFormLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   @Input()
   public layout: DynamicFormLayout | undefined;
@@ -80,6 +86,10 @@ export class NgorDynamicFormComponent<FormModel> implements OnInit, AfterViewChe
 
   private _formBuilder: FormBuilder;
   private _dynamicFormService: DynamicFormService;
+  private _labels: INgorFormLabels = {
+    cancel: 'ngorForms.cancel',
+    submit: 'ngorForms.submit',
+  };
 
   constructor(formBuilder: FormBuilder, dynamicFormService: DynamicFormService) {
     this._formBuilder = formBuilder;

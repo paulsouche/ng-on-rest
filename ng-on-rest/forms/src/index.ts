@@ -13,8 +13,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormsCoreModule } from '@ng-dynamic-forms/core';
 import { DynamicFormsNGBootstrapUIModule } from '@ng-dynamic-forms/ui-ng-bootstrap';
-import { TranslateModule } from '@ngx-translate/core';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorDynamicFormComponent } from './components/dynamic-form.component';
+import en from './locales/en';
+import fr from './locales/fr';
 import { NgorTranslateFormModelPipe } from './pipes/translate-form-model.pipe';
 
 @NgModule({
@@ -30,7 +32,9 @@ import { NgorTranslateFormModelPipe } from './pipes/translate-form-model.pipe';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TranslateModule.forChild(),
+    NgorI18nModule.forChild({
+      defaultLocales: { en, fr },
+    }),
     DynamicFormsCoreModule.forRoot(),
     DynamicFormsNGBootstrapUIModule,
   ],

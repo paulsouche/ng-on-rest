@@ -41,6 +41,7 @@
   "dependencies": {
     "@ng-dynamic-forms/core": "^5.0.0",
     "@ng-dynamic-forms/ui-ng-bootstrap": "^5.0.0",
-    "@ngx-translate/core": "^9.0.0"
+    "@ngx-translate/core": "^9.0.0",
+    "ng-on-rest-i18n": "^1.0.0-alpha.0"
   }
 }

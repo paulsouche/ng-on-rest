@@ -7,7 +7,8 @@
     "umdModuleIds": {
       "@ng-dynamic-forms/core": "ngDF.core",
       "@ng-dynamic-forms/ui-ng-bootstrap": "ngDF.ngBootstrapUI",
-      "@ngx-translate/core": "ngx-translate.core"
+      "@ngx-translate/core": "ngx-translate.core",
+      "ng-on-rest-i18n": "ng-on-rest-i18n"
     }
   }
 }

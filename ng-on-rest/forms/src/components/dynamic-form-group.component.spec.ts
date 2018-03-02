@@ -6,6 +6,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { DynamicFormControlEvent } from '@ng-dynamic-forms/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorDynamicFormComponent, NgorFormsModule, TNgorFormModel } from '../';
 import { NgorCustomFormGroupComponent } from './custom-form-group.component';
 
@@ -109,6 +110,7 @@ describe('NgorDynamicFormComponent', () => {
         ],
         imports: [
           TranslateModule.forRoot(),
+          NgorI18nModule.forRoot(),
           NgorFormsModule.forRoot(),
         ],
       })
