@@ -4,6 +4,7 @@ import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing'
 // tslint:disable-next-line:no-implicit-dependencies
 import { By } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+// tslint:disable-next-line:no-implicit-dependencies
 import { TranslateModule } from '@ngx-translate/core';
 // tslint:disable-next-line:no-implicit-dependencies
 import * as faker from 'faker';
@@ -19,6 +20,7 @@ import {
   TNGOR_SORT,
 } from 'ng-on-rest-core';
 import { spyNgorGenericClient, spyNgorResourceComponentsService } from 'ng-on-rest-core/testing';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NGOR_ENTITIES_RANGES, NgorDatagridComponent, NgorListModule } from '../';
 import { NgorDatagridSearchComponent } from './datagrid-search.component';
 import { NgorDatagridToolbarComponent } from './datagrid-toolbar.component';
@@ -177,6 +179,7 @@ describe('NgorDatagridComponent', () => {
         ],
         imports: [
           TranslateModule.forRoot(),
+          NgorI18nModule.forRoot(),
           RouterModule.forRoot([], { useHash: true }),
           NgorCoreModule.forRoot({
             resources: [],
@@ -310,6 +313,7 @@ describe('NgorDatagridComponent', () => {
         ],
         imports: [
           TranslateModule.forRoot(),
+          NgorI18nModule.forRoot(),
           RouterModule.forRoot([], { useHash: true }),
           NgorCoreModule.forRoot({
             resources: [],
@@ -387,6 +391,7 @@ describe('NgorDatagridComponent', () => {
         ],
         imports: [
           TranslateModule.forRoot(),
+          NgorI18nModule.forRoot(),
           RouterModule.forRoot([], { useHash: true }),
           NgorCoreModule.forRoot({
             resources: [],
@@ -425,6 +430,7 @@ describe('NgorDatagridComponent', () => {
         ],
         imports: [
           TranslateModule.forRoot(),
+          NgorI18nModule.forRoot(),
           RouterModule.forRoot([], { useHash: true }),
           NgorCoreModule.forRoot({
             resources: [],

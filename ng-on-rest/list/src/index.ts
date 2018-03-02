@@ -9,12 +9,14 @@ import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateModule } from '@ngx-translate/core';
 import { NgorCoreModule } from 'ng-on-rest-core';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorDatagridColumnComponent } from './components/datagrid-column.component';
 import { NgorDatagridSearchComponent } from './components/datagrid-search.component';
 import { NgorDatagridToolbarComponent } from './components/datagrid-toolbar.component';
 import { NgorDatagridComponent } from './components/datagrid.component';
+import en from './locales/en';
+import fr from './locales/fr';
 import { NGOR_ENTITIES_RANGES } from './tokens/entities-ranges.token';
 import { NGOR_PAGINATION_SIZE } from './tokens/pagination-size.token';
 
@@ -41,7 +43,9 @@ export interface INgorListModuleConfig {
     RouterModule,
     NgbAlertModule.forRoot(),
     NgbPaginationModule.forRoot(),
-    TranslateModule.forChild(),
+    NgorI18nModule.forChild({
+      defaultLocales: { en, fr },
+    }),
     NgorCoreModule.forChild(),
   ],
 })

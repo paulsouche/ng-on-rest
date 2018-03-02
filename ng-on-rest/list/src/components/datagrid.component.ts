@@ -73,16 +73,14 @@ export class NgorDatagridComponent<Qry, Prms, ECrteDto, EUpdteDto, EDto extends 
   @Input()
   public filterParams: INgorFilterParameter[] | undefined;
 
-  // TODO i18n module
   @Input()
-  public labels: INgorDatagridLabels = {
-    addButton: 'Add',
-    editButton: 'Edit',
-    noEntities: 'No results :(',
-    range: 'Number of items',
-    searchButton: 'Go!',
-    searchPlaceholder: 'Search',
-  };
+  set labels(labels: INgorDatagridLabels) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   public entities: EDto[] | undefined;
   public range: number;
@@ -93,6 +91,14 @@ export class NgorDatagridComponent<Qry, Prms, ECrteDto, EUpdteDto, EDto extends 
   private _resourceService: NgorResourceComponentsService<Qry, Prms, ECrteDto, EUpdteDto, EDto>;
   private _search: string;
   private _page: number;
+  private _labels: INgorDatagridLabels = {
+    addButton: 'ngorList.addButton',
+    editButton: 'ngorList.editButton',
+    noEntities: 'ngorList.noEntities',
+    range: 'ngorList.range',
+    searchButton: 'ngorList.searchButton',
+    searchPlaceholder: 'ngorList.searchPlaceholder',
+  };
 
   constructor(
     resourceService: NgorResourceComponentsService<Qry, Prms, ECrteDto, EUpdteDto, EDto>,
