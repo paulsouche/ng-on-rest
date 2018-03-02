@@ -14,7 +14,7 @@ import { IUpdateEntityModalLabels } from '../interfaces/udate-entity-modal-label
       <button class="btn btn-primary"
               type="submit"
               [attr.disabled]="!form.formGroup.valid || null"
-              [innerHTML]="labels.save | translate"
+              [innerHTML]="labels.submit | translate"
               form="ngorUpdateForm">
       </button>
     </div>
@@ -32,7 +32,13 @@ export class NgorUpdateEntityModalComponent<UpdateFormModel> {
   public model: TNgorFormModel[];
 
   @Input()
-  public labels: IUpdateEntityModalLabels = {};
+  set labels(labels: IUpdateEntityModalLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   @Output()
   public onUpdate = new EventEmitter<UpdateFormModel>(true);
@@ -43,6 +49,10 @@ export class NgorUpdateEntityModalComponent<UpdateFormModel> {
   public value: UpdateFormModel;
 
   private _activeModal: NgbActiveModal;
+  private _labels: IUpdateEntityModalLabels = {
+    cancel: 'ngorForms.cancel',
+    submit: 'ngorForms.submit',
+  };
 
   constructor(activeModal: NgbActiveModal) {
     this._activeModal = activeModal;

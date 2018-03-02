@@ -29,18 +29,22 @@ export class NgorUpdateEntityComponent<UpdtFormMdl, Qry, Prms, ECrteDto, EUpdteD
   @Input()
   public model: TNgorFormModel[] | undefined;
 
-  // TODO i18n module
   @Input()
-  public labels: INgorUpdateEntityLabels = {
-    cancel: 'Cancel',
-    save: 'Save',
-    update: 'Update',
-  };
+  set labels(labels: INgorUpdateEntityLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   public entity: EDto;
   public value: UpdtFormMdl;
 
   private _resourceComponentsService: NgorResourceComponentsService<Qry, Prms, ECrteDto, EUpdteDto, EDto>;
+  private _labels: INgorUpdateEntityLabels = {
+    edit: 'ngorDetail.edit',
+  };
 
   constructor(resourceComponentsService: NgorResourceComponentsService<Qry, Prms, ECrteDto, EUpdteDto, EDto>) {
     this._resourceComponentsService = resourceComponentsService;

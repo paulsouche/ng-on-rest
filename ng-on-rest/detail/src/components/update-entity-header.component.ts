@@ -11,7 +11,7 @@ import { NgorUpdateEntityModalComponent } from './update-entity-modal.component'
       <h2 [innerHTML]="labels.title | translate"></h2>
       <ng-container *ngIf="model && value">
         <button class="btn btn-link"
-                [innerHTML]="labels.update | translate"
+                [innerHTML]="labels.edit | translate"
                 (click)="openEditModal(model)">
         </button>
       </ng-container>
@@ -26,11 +26,18 @@ export class NgorUpdateEntityHeaderComponent<UpdateFormModel> {
   public model: TNgorFormModel[] | undefined;
 
   @Input()
-  public labels: INgorUpdateEntityLabels = {};
+  set labels(labels: INgorUpdateEntityLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   @Output()
   public onUpdate = new EventEmitter<UpdateFormModel>(true);
 
+  private _labels: INgorUpdateEntityLabels = {};
   private _modalCtrl: NgbModal;
 
   constructor(modalCtrl: NgbModal) {

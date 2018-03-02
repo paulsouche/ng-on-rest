@@ -9,13 +9,15 @@ export { NgorUpdateEntityComponent } from './components/update-entity.component'
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateModule } from '@ngx-translate/core';
 import { NgorCoreModule } from 'ng-on-rest-core';
 import { NgorFormsModule } from 'ng-on-rest-forms';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorUpdateEntityDetailComponent } from './components/update-entity-detail.component';
 import { NgorUpdateEntityHeaderComponent } from './components/update-entity-header.component';
 import { NgorUpdateEntityModalComponent } from './components/update-entity-modal.component';
 import { NgorUpdateEntityComponent } from './components/update-entity.component';
+import en from './locales/en';
+import fr from './locales/fr';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { NgorUpdateEntityComponent } from './components/update-entity.component'
   imports: [
     CommonModule,
     NgbModalModule.forRoot(),
-    TranslateModule.forChild(),
+    NgorI18nModule.forChild({
+      defaultLocales: { en, fr },
+    }),
     NgorCoreModule.forChild(),
     NgorFormsModule.forChild(),
   ],

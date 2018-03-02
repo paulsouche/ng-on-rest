@@ -8,7 +8,8 @@
       "@ng-bootstrap/ng-bootstrap": "ngb",
       "@ngx-translate/core": "ngx-translate.core",
       "ng-on-rest-core": "ng-on-rest-core",
-      "ng-on-rest-forms": "ng-on-rest-forms"
+      "ng-on-rest-forms": "ng-on-rest-forms",
+      "ng-on-rest-i18n": "ng-on-rest-i18n"
     }
   }
 }

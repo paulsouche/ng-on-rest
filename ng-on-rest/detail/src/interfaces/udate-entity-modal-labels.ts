@@ -1,5 +1,5 @@
-export interface IUpdateEntityModalLabels {
-  cancel?: string | undefined;
+import { INgorFormLabels } from 'ng-on-rest-forms';
+
+export interface IUpdateEntityModalLabels extends INgorFormLabels {
   modalTitle?: string | undefined;
-  save?: string | undefined;
 }
