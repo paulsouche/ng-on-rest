@@ -40,12 +40,14 @@ export class NgorCreateEntityStepComponent<FormModel> implements AfterViewInit {
   @Input()
   public model: TNgorFormModel = [];
 
-  // TODO i18n module
   @Input()
-  public labels: INgorCreateStepLabels = {
-    cancel: 'Cancel',
-    submit: 'Submit',
-  };
+  set labels(labels: INgorCreateStepLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   @Input()
   public layout: DynamicFormLayout | undefined;
@@ -82,6 +84,8 @@ export class NgorCreateEntityStepComponent<FormModel> implements AfterViewInit {
 
   @ContentChildren(NgorCustomFormGroupComponent)
   public customFormGroups: QueryList<NgorCustomFormGroupComponent>;
+
+  private _labels: INgorCreateStepLabels = {};
 
   public ngAfterViewInit() {
     const formGroup = this.form.formGroup;

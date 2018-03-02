@@ -49,9 +49,14 @@ export class NgorCreateEntityComponent<
   @ContentChildren(NgorCreateEntityStepComponent)
   public steps: QueryList<NgorCreateEntityStepComponent<FormMdl>>;
 
-  // TODO i18n module
   @Input()
-  public labels: INgorCreateLabels = {};
+  set labels(labels: INgorCreateLabels | undefined) {
+    Object.assign(this._labels, labels);
+  }
+
+  get labels() {
+    return this._labels;
+  }
 
   @Input()
   public subEntitiesMap: Array<INgorSubEntitiesMap<EDto, CCrteDto>> | undefined;
@@ -67,6 +72,7 @@ export class NgorCreateEntityComponent<
   public activeStepIndex: number;
   public templateContext: { back(): void, submit(): void };
 
+  private _labels: INgorCreateLabels = {};
   private _location: Location;
   private _router: Router;
   private _route: ActivatedRoute;

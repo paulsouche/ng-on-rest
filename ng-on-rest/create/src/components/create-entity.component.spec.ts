@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgorCoreModule, NgorResourceComponentsService } from 'ng-on-rest-core';
 import { spyNgorResourceComponentsService } from 'ng-on-rest-core/testing';
 import { TNgorFormModel } from 'ng-on-rest-forms';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorCreateModule } from '../';
 
 @Component({
@@ -63,6 +64,7 @@ describe('NgorCreateEntityComponent', () => {
       ],
       imports: [
         TranslateModule.forRoot(),
+        NgorI18nModule.forRoot(),
         RouterModule.forRoot([], { useHash: true }),
         NgorCoreModule.forRoot({
           resources: [],

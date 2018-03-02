@@ -10,9 +10,9 @@ export { NgorCreateEntityComponent } from './components/create-entity.component'
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 import { NgorCoreModule } from 'ng-on-rest-core';
 import { NgorFormsModule } from 'ng-on-rest-forms';
+import { NgorI18nModule } from 'ng-on-rest-i18n';
 import { NgorCreateEntityStepComponent } from './components/create-entity-step.component';
 import { NgorCreateEntityComponent } from './components/create-entity.component';
 
@@ -28,9 +28,9 @@ import { NgorCreateEntityComponent } from './components/create-entity.component'
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule.forChild(),
     NgorCoreModule.forChild(),
     NgorFormsModule.forChild(),
+    NgorI18nModule.forChild(),
   ],
 })
 export class NgorCreateModule {
